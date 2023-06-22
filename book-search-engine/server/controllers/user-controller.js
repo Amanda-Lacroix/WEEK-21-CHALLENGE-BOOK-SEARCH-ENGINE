@@ -5,7 +5,6 @@ const { signToken } = require('../utils/auth');
 
 
   // get a single user by either their id or their username
-  async function getSingleUser({ user = null, params }, res) 
     async function getSingleUser({ user = null, params }, res) {
       const foundUser = await User.findOne({
         $or: [{ _id: user ? user._id : params.id }, { username: params.username }],
