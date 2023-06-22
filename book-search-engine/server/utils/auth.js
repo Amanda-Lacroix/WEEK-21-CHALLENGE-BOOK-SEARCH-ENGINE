@@ -9,7 +9,7 @@ const authMiddleware = (req, res, next) => {
   if (!token) {
     return next();
   }
-  
+  try{
 // Verifies the JWT using the provided secret key 
     const { data } = jwt.verify(token, secret);
 
