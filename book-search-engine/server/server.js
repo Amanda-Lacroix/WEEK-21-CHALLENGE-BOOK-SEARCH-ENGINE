@@ -1,10 +1,10 @@
-import express from 'express';
-import path from 'path';
-import { ApolloServer } from 'apollo-server-express';
-import { typeDefs, resolvers } from './schemas';
-import routes from './routes';
-import { connect } from './config/connection';
-
+// imports from npm and files
+const { ApolloServer } = require('apollo-server-express');
+const { typeDefs, resolvers } = require('./schemas');
+const express = require('express');
+const path = require('path');
+const db = require('./config/connection');
+const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -24,12 +24,8 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(routes);
 
-
-connect().then(() => {
-  server.start().then(() => {
-    server.applyMiddleware({ app });
-    app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
-  });
+db.once('open', () => {
+  app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
 });
 
 
