@@ -10,7 +10,6 @@
   - [Credits](#credits)
   - [License](#license)
 
-    
   ## Description
   GraphQL Api with Apollo Server and React front end. 
   Search for books and save to list.
