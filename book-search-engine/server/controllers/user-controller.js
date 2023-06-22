@@ -71,3 +71,11 @@ module.exports = {
     return res.json(updatedUser);
   },
 };
+
+module.exports = {
+  // getSingleUser,
+  createUser,
+  login,
+  saveBook,
+  deleteBook
+};
