@@ -24,6 +24,7 @@
   EMAIL: amanda_lacroix@hotmail.com
   REPO: https://github.com/Amanda-Lacroix/WEEK-21-CHALLENGE-BOOK-SEARCH-ENGINE
   DEPLOYED APP: 
+https://git.heroku.com/ancient-brook-27218.git 
   ## Credits
  - Starter code provided by: https://git.bootcampcontent.com/new-brunswick/UNB-VIRT-FSF-PT-01-2023-U-LOLC 
  - Tutorials - https://www.digitalocean.com/community/tutorials/
